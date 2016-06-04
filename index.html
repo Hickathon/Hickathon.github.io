@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8" />
+    <title>Hickathon - 海客松</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="海南黑客马拉松" />
+    <meta name="author" content="AwThink">
+    
+  	<link rel="icon" type="image/ico" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/theater.min.js"></script>
+   
+</head>
+
+<body>  	
+<div class="outer">
+  <div class="inner">
+      <div class="wrapper">
+          <div class="scene">
+              <div><span id="Veni"></span></div>
+              <div><span id="Vidi"></span></div>
+              <div><span id="Vici"></span></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+      "use strict";
+      var theater = new TheaterJS();
+
+      theater
+          .describe("Veni", .9, "#Veni")
+          .describe("Vidi", .8, "#Vidi")
+          .describe("Vici", .7, "#Vici");
+
+      theater
+          .on("say:start, erase:start", function (eventName) {
+              var self    = this,
+                  current = self.current.voice;
+              self.utils.addClass(current, "saying");
+          })
+          .on("say:end, erase:end", function (eventName) {
+              var self    = this,
+                  current = self.current.voice;
+              self.utils.removeClass(current, "saying");
+          });
+
+      theater
+          .write("Veni:- ", 1000, "Hello.", 1000, "Wellcom to Matrix...", 1000, -4, 400, -2, 300, -3, 1000, "Hickathon.", 1000)
+          .write("Vidi:- ", 1000, "这里是海客松基地。", 2000, -9, 500, "欢迎返航。", 1000)
+          .write("Vici:- ", 1000, "编程路上太孤独", 1000, -7, 1000, "所以我想出海客松", 1000, -8, 1000, "希望找到同路人，结伴前行", 1000, -12, 1000, "共同学习、共同成长、同侪压力等等", 1000, -16, 1000, "身处2016，你对这些词应该不感到陌生", 2000, -19, 1000, "这些词都不是我想出来的", 1000, -11, 1000, "我只是想，", 1000, "提高技术、不断成长。", 1000, "我想实践一下", 3500, -23)
+          .write("Vidi:", -7)
+          .write("Veni:", -25, 1000)
+          .write("Vici:- ", 1000, "我在这，你呢？", 2000)
+          .write(function () { theater.play(false); });
+  })();
+</script>
+</body>
+</html>
