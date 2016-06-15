@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8" />
-    <title>Hickathon - 海客松</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="海南黑客马拉松" />
-    <meta name="author" content="AwThink">
-    
-  	<link rel="icon" type="image/ico" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="assets/index.css">
-    <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/theater.min.js"></script>
-   
+  <meta charset="UTF-8" />
+  <title>Hickathon - 海客松 - 海南黑客马拉松</title>
+  <meta content="Hickathon,海客松,海南黑客马拉松" name="keywords">
+  <meta content="Hickathon海南黑客马拉松，感受同侪压力，构筑同辈信任，一起共同成长" name="description">
+  <meta content="index,follow" name="robots">
+  <meta content="index,follow" name="GOOGLEBOT">
+  <meta content="Hickathon,海客松,海南黑客马拉松"  name="Author">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/ico" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/index.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/theater.min.js"></script> 
 </head>
 
 <body>  	
@@ -23,6 +23,8 @@
               <div><span id="Veni"></span></div>
               <div><span id="Vidi"></span></div>
               <div><span id="Vici"></span></div>
+              <div><span id="Vi"></span></div>
+              <div><span id="ci"></span></div>
           </div>
 
           <!-- <pre id="nodebug"><code>
@@ -48,8 +50,10 @@ theater.write(
 
       theater
           .describe("Veni", .9, "#Veni")
-          .describe("Vidi", .8, "#Vidi")
-          .describe("Vici", .7, "#Vici");
+          .describe("Vidi", .9, "#Vidi")
+          .describe("Vici", .9, "#Vici")
+          .describe("Vi", .8, "#Vi")
+          .describe("ci", .8, "#ci");
           //"Veni", .9, "#Veni"
           //人名    经验  htmlID
           //人名对应下面.write的开头，用于标识人物
@@ -80,12 +84,17 @@ theater.write(
           });
 
       theater
-          .write("Veni:- ", 1000, "Hello.", 1000, "Wellcom to Matrix...", 1000, -4, 400, -2, 300, -3, 1000, "Hickathon.", 1000)
+          .write("Veni:- ", 1000, "Hello.", 1000, "Wellcom to Matrix...", 1000, -1, 100, -1, 100, -1, 100, -1, 100, -1, 100, -1, 100, -1, 100, -1, 100, -1, 100, 1000, "Hickathon.", 1000)
           .write("Vidi:- ", 1000, "这里是海客松基地。", 2000, -9, 500, "欢迎返航。", 1000)
-          .write("Vici:- ", 1000, "编程路上太孤独", 1000, -7, 1000, "所以我想出海客松", 1000, -8, 1000, "希望找到同路人，结伴前行", 1000, -12, 1000, "共同学习、共同成长、同侪压力等等", 1000, -16, 1000, "身处2016，你对这些词应该不感到陌生", 2000, -19, 1000, "这些词都不是我想出来的", 1000, -11, 1000, "我只是想，", 1000, "提高技术、不断成长。", 1000, "我想实践一下", 3500, -23)
+          .write("Vici:- ", 1000, "感受同侪压力", 1000)
+          .write("Vi:- ", 1000, "构筑同辈信任", 1000)
+          .write("ci:- ", 1000, "一起共同成长", 7000)
+          .write("ci:", -7)
+          .write("Vi:", -7)
+          .write("Vici:", -7)
           .write("Vidi:", -7)
           .write("Veni:", -25, 1000)
-          .write("Vici:- ", 1000, "我在这，你呢？", 2000)
+          .write("Vici:- ", 1000, "Hickathon！", 1000)
           // .write({ name: "call", args: [kill, true] })
           // .write("Veni:- 海: ", 1000)
           // .write("Vidi:- 客: ", 1000)
